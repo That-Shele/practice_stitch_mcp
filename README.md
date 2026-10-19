@@ -41,14 +41,33 @@ Se trabajó con:
    npm start
    ```
 
-3. Abrir en navegador:
-   - **Inicio (login):** `http://localhost:3000/`
-   - **Home Stitch:** `http://localhost:3000/landing/index.html`
-   - **Lobby Principal:** `http://localhost:3000/landing/lobby-principal.html`
-   - **Casino en Vivo:** `http://localhost:3000/landing/casino-en-vivo.html`
-   - **Billetera / Cajero:** `http://localhost:3000/landing/billetera-cajero.html`
-   - **Ruleta Live (Juego de Mesa):** `http://localhost:3000/landing/ruleta-live.html`
+3. Abrir `http://localhost:3000/`
 
-4. Rutas no contempladas por Stitch:
-   - Se redirigen a la página genérica de construcción:
-   `http://localhost:3000/landing/en-construccion.html`
+4. En el login (pantalla inicial):
+   - Escribir cualquier usuario y contraseña.
+   - Clic en **"Ingresar al Casino"**.
+
+5. Ya dentro (vista principal), usar el **menú lateral izquierdo**:
+   - Clic en **"Lobby Principal"** → abre `lobby-principal.html`.
+   - Clic en **"Casino en Vivo"** → abre `casino-en-vivo.html`.
+   - Clic en **"Mi Billetera / Cajero"** → abre `billetera-cajero.html`.
+   - Clic en **"Juegos de Mesa"** → abre `ruleta-live.html`.
+
+6. Desde **Casino en Vivo** también puedes entrar a una mesa con los botones:
+   - **"Entrar a la Mesa"** / **"Apostar en Vivo"** / **"Tomar Asiento"** (según tarjeta).
+   - Estas acciones llevan a flujo de juego o, si no existe pantalla específica, a la vista de construcción.
+
+7. Para salir de la sesión mock:
+   - En el menú lateral, sección **Cuenta & Servicios**, clic en **"Cerrar sesión"**.
+
+### Atajos directos por URL
+- Login: `http://localhost:3000/landing/login.html`
+- Home Stitch: `http://localhost:3000/landing/index.html`
+- Lobby Principal: `http://localhost:3000/landing/lobby-principal.html`
+- Casino en Vivo: `http://localhost:3000/landing/casino-en-vivo.html`
+- Billetera / Cajero: `http://localhost:3000/landing/billetera-cajero.html`
+- Ruleta Live: `http://localhost:3000/landing/ruleta-live.html`
+
+## Rutas no contempladas por Stitch
+- Se redirigen a la página genérica de construcción:
+  `http://localhost:3000/landing/en-construccion.html`

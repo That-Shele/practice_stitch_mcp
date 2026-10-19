@@ -1,0 +1,95 @@
+﻿<!doctype html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login | Obsidian Prestige Casino</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            background: '#0e131d',
+            surface: '#1b202a',
+            surfaceLow: '#171c26',
+            outline: '#9d8f7b',
+            primary: '#f5b738',
+            onPrimary: '#422d00',
+            secondary: '#10b981',
+            text: '#dee2f1',
+            textMuted: '#d4c4ae'
+          },
+          fontFamily: {
+            body: ['Plus Jakarta Sans', 'Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+<style id="obsidian-scrollbar-style">
+  * { scrollbar-width: thin; scrollbar-color: #f5b738 #171c26; }
+  *::-webkit-scrollbar { width: 12px !important; height: 12px !important; display: block !important; }
+  *::-webkit-scrollbar-track { background: #171c26; border-radius: 9999px; }
+  *::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ffd064 0%, #f5b738 50%, #fbbc3d 100%); border: 2px solid #171c26; border-radius: 9999px; }
+  *::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #ffe08a 0%, #ffd064 50%, #fbbc3d 100%); }
+</style>
+</head>
+<body class="bg-background text-text font-body min-h-screen">
+<main class="relative min-h-screen grid place-items-center px-4 overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBglEEYLfg2l6xMqIKoq9daiQufojtxPyDiWtIbBoILaKQ8Yt7owEjpfjwSxysrUgD-DucfZRX3Dmw8EIX-KwcvNon6ms9O92O96zjvkKcOcexDJs5KramV8uaQD2vyw5OnkS76WN3O2bTjYOpQZSKtj0xYP6yVFWKoR08Qc7TRcvLHmK56-KmXS9SSHCWUB31_-bocOf4lezoL8RMwt9rqKHCR7VHvlKVjk1fhqqw1My-IL3CX34zDrg"
+        alt="Casino background"
+        class="h-full w-full object-cover scale-105"
+      />
+      <div class="absolute inset-0 bg-gradient-to-br from-background/95 via-background/85 to-surface/90"></div>
+    </div>
+
+    <section class="relative z-10 w-full max-w-md rounded-2xl border border-white/15 bg-surface/85 backdrop-blur-xl p-6 shadow-[0_0_40px_-10px_rgba(245,183,56,0.35)]">
+      <p class="text-xs uppercase tracking-[0.22em] text-secondary font-bold">Acceso VIP</p>
+      <h1 class="mt-2 text-3xl font-extrabold tracking-tight text-primary">Obsidian Prestige</h1>
+      <p class="mt-1 text-sm text-textMuted">Mock de inicio de sesión</p>
+
+      <form id="loginForm" class="mt-6 space-y-4">
+        <div>
+          <label class="block text-sm mb-1" for="user">Usuario</label>
+          <input id="user" required class="w-full rounded-lg bg-surfaceLow border border-white/10 px-3 py-2 outline-none focus:border-primary" placeholder="alexander.m" />
+        </div>
+        <div>
+          <label class="block text-sm mb-1" for="pass">Contraseña</label>
+          <input id="pass" type="password" required class="w-full rounded-lg bg-surfaceLow border border-white/10 px-3 py-2 outline-none focus:border-primary" placeholder="••••••••" />
+        </div>
+        <button type="submit" class="w-full rounded-lg bg-primary text-onPrimary font-bold py-2.5 hover:brightness-110 transition">
+          Ingresar al Casino
+        </button>
+      </form>
+
+      <p class="mt-4 text-xs text-textMuted">Demo: cualquier usuario/contraseña válida te deja entrar.</p>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const user = document.getElementById('user').value.trim();
+      const pass = document.getElementById('pass').value.trim();
+      if (!user || !pass) return;
+      localStorage.setItem('mock_auth', 'true');
+      localStorage.setItem('mock_user', user);
+      const inViewsPath = /\/views\//.test((window.location.pathname || '').replace(/\\/g, '/'));
+      const target = (window.location.protocol === 'file:' || inViewsPath)
+        ? 'lobby-principal.html'
+        : '/views/lobby-principal.html';
+      window.location.href = target;
+    });
+  </script>
+</body>
+</html>
+
+

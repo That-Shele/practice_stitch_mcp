@@ -1,0 +1,87 @@
+﻿<!doctype html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página en construcción | Obsidian Prestige Casino</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            background: '#0e131d',
+            surface: '#1b202a',
+            surfaceLow: '#171c26',
+            primary: '#f5b738',
+            onPrimary: '#422d00',
+            secondary: '#10b981',
+            text: '#dee2f1',
+            textMuted: '#d4c4ae'
+          },
+          fontFamily: {
+            body: ['Plus Jakarta Sans', 'Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+<style id="obsidian-scrollbar-style">
+  * { scrollbar-width: thin; scrollbar-color: #f5b738 #171c26; }
+  *::-webkit-scrollbar { width: 12px !important; height: 12px !important; display: block !important; }
+  *::-webkit-scrollbar-track { background: #171c26; border-radius: 9999px; }
+  *::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ffd064 0%, #f5b738 50%, #fbbc3d 100%); border: 2px solid #171c26; border-radius: 9999px; }
+  *::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #ffe08a 0%, #ffd064 50%, #fbbc3d 100%); }
+</style>
+</head>
+<body class="bg-background text-text font-body min-h-screen">
+<main class="min-h-screen grid place-items-center px-4">
+    <section class="w-full max-w-2xl rounded-2xl border border-white/10 bg-surface/90 p-8 text-center shadow-2xl">
+      <p class="text-xs uppercase tracking-widest text-secondary">Obsidian Prestige</p>
+      <h1 class="mt-2 text-3xl font-extrabold text-primary">Página en construcción</h1>
+      <p class="mt-3 text-textMuted">
+        El módulo <strong id="moduleName" class="text-text">(sin nombre)</strong> aún no está contemplado en las pantallas de Stitch.
+      </p>
+
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="../index.html" class="rounded-lg bg-primary px-5 py-2.5 text-onPrimary font-bold hover:brightness-110">Ir al Home</a>
+        <a href="lobby-principal.html" class="rounded-lg bg-surfaceLow px-5 py-2.5 border border-white/10 hover:border-primary">Ir al Lobby</a>
+        <a href="casino-en-vivo.html" class="rounded-lg bg-surfaceLow px-5 py-2.5 border border-white/10 hover:border-primary">Casino en Vivo</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    if (localStorage.getItem('mock_auth') !== 'true') {
+      window.location.href = 'login.html';
+    }
+
+    function cerrarSesionMock() {
+      localStorage.removeItem('mock_auth');
+      localStorage.removeItem('mock_user');
+      window.location.href = 'login.html';
+    }
+
+    const logoutBtn = document.createElement('button');
+    logoutBtn.type = 'button';
+    logoutBtn.textContent = 'Cerrar sesión';
+    logoutBtn.setAttribute('aria-label', 'Cerrar sesión');
+    logoutBtn.className = 'fixed bottom-4 right-4 z-50 rounded-lg px-3 py-2 text-xs font-extrabold uppercase tracking-wider text-onPrimary bg-primary border border-[rgba(66,45,0,0.35)] shadow-[0_0_20px_-8px_rgba(245,183,56,0.75)] hover:brightness-110';
+    logoutBtn.addEventListener('click', cerrarSesionMock);
+    document.body.appendChild(logoutBtn);
+
+    const params = new URLSearchParams(window.location.search);
+    const page = params.get('page') || 'modulo-no-definido';
+    const pretty = page.replace(/[-_]+/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase());
+    document.getElementById('moduleName').textContent = pretty;
+  </script>
+</body>
+</html>
+
+
+

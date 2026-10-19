@@ -1,14 +1,11 @@
 {
-  "name": "mcp-practice-landing",
+  "name": "mcp-practice-stitch",
   "version": "1.0.0",
   "private": true,
-  "description": "Landing page del prototipo Stitch en Node.js + Express",
+  "description": "Proyecto estático Stitch con servidor local opcional",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
-  },
-  "dependencies": {
-    "express": "^4.21.2"
   }
 }

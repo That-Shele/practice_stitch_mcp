@@ -1,0 +1,11 @@
+{
+  "name": "mcp-practice-stitch",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Proyecto estático Stitch con servidor local opcional",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}

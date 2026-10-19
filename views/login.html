@@ -1,4 +1,4 @@
-?<!doctype html>
+﻿<!doctype html>
 <html lang="es" class="dark">
 <head>
   <meta charset="UTF-8" />
@@ -41,16 +41,7 @@
 </style>
 </head>
 <body class="bg-background text-text font-body min-h-screen">
-<div id="opencode-static-nav" style="background:#090e18;border-bottom:1px solid rgba(255,255,255,.08);padding:8px 12px;font-family:Inter,Arial,sans-serif;position:relative;z-index:10000">
-  <a href="../index.html" style="color:#f5b738;font-weight:700;margin-right:10px;text-decoration:none">Inicio</a>
-  <a href="lobby-principal.html" style="color:#dee2f1;margin-right:10px;text-decoration:none">Lobby</a>
-  <a href="casino-en-vivo.html" style="color:#dee2f1;margin-right:10px;text-decoration:none">Casino en vivo</a>
-  <a href="billetera-cajero.html" style="color:#dee2f1;margin-right:10px;text-decoration:none">Billetera</a>
-  <a href="ruleta-live.html" style="color:#dee2f1;margin-right:10px;text-decoration:none">Ruleta</a>
-  <a href="en-construccion.html" style="color:#dee2f1;text-decoration:none">En construcción</a>
-</div>
-
-  <main class="relative min-h-screen grid place-items-center px-4 overflow-hidden">
+<main class="relative min-h-screen grid place-items-center px-4 overflow-hidden">
     <div class="absolute inset-0">
       <img
         src="https://lh3.googleusercontent.com/aida-public/AB6AXuBglEEYLfg2l6xMqIKoq9daiQufojtxPyDiWtIbBoILaKQ8Yt7owEjpfjwSxysrUgD-DucfZRX3Dmw8EIX-KwcvNon6ms9O92O96zjvkKcOcexDJs5KramV8uaQD2vyw5OnkS76WN3O2bTjYOpQZSKtj0xYP6yVFWKoR08Qc7TRcvLHmK56-KmXS9SSHCWUB31_-bocOf4lezoL8RMwt9rqKHCR7VHvlKVjk1fhqqw1My-IL3CX34zDrg"
@@ -91,7 +82,11 @@
       if (!user || !pass) return;
       localStorage.setItem('mock_auth', 'true');
       localStorage.setItem('mock_user', user);
-      window.location.href = 'lobby-principal.html';
+      const inViewsPath = /\/views\//.test((window.location.pathname || '').replace(/\\/g, '/'));
+      const target = (window.location.protocol === 'file:' || inViewsPath)
+        ? 'lobby-principal.html'
+        : '/views/lobby-principal.html';
+      window.location.href = target;
     });
   </script>
 </body>

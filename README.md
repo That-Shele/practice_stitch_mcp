@@ -1,4 +1,7 @@
 # MCP Practice - Obsidian Prestige (Stitch)
+## Nuestro proyecto
+
+**Obsidian Casino** es una experiencia de casino online con una interfaz oscura y acentos dorados. La pantalla **Casino en Vivo** presenta mesas de ruleta, blackjack, baccarat y juegos de espectáculo, con filtros por categoría, salas VIP e indicadores de actividad en directo.
 
 ## Resumen
 Este proyecto integra pantallas generadas en Stitch en una app web **estática** (HTML/CSS/JS puro, sin build).
@@ -31,7 +34,11 @@ Se trabajó con:
 
 ## Guía para ingresar a las páginas con contenido
 
-1. Abrir `index.html` con doble clic (modo `file://`) **o** levantar servidor estático opcional:
+1. Abrir `index.html` con doble clic (modo `file://`) **o** levantar servidor local:
+   ```bash
+   npm start
+   ```
+   También puedes usar servidor estático opcional:
    ```bash
    npx serve .
    ```
@@ -66,3 +73,12 @@ Se trabajó con:
 ## Rutas no contempladas por Stitch
 - Se redirigen a la página genérica de construcción:
   `views/en-construccion.html`
+
+
+## Enlace a Stitch
+`https://stitch.withgoogle.com/projects/16024140600771838651`
+
+## Participantes
+
+- Maynor Bolaños: Operador de Agente y QA bolanosmaynor@outlook.com
+- Geovany Calles: Diseñador Stitch geo.calles@gmail.com

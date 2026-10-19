@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Obsidian Prestige Casino | Portada</title>
+  <style>
+    :root {
+      --bg: #0e131d;
+      --card: #1b202a;
+      --card-2: #252a35;
+      --text: #dee2f1;
+      --muted: #d4c4ae;
+      --primary: #f5b738;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at top right, #1b202a 0%, var(--bg) 55%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 24px; }
+    .badge { color: var(--primary); letter-spacing: .12em; text-transform: uppercase; font-weight: 700; font-size: 12px; }
+    h1 { margin: 8px 0 6px; font-size: 2rem; }
+    p { color: var(--muted); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 20px; }
+    a.card {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      background: linear-gradient(180deg, var(--card), var(--card-2));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 12px;
+      padding: 14px;
+    }
+    a.card:hover { border-color: rgba(245,183,56,.6); transform: translateY(-1px); }
+    .title { font-weight: 700; margin-bottom: 4px; }
+    .foot { margin-top: 20px; font-size: .9rem; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="badge">Equipo · MCP Practice</div>
+    <h1>Obsidian Prestige Casino</h1>
+    <p>Temática: casino premium en vivo con lobby, billetera y mesa de ruleta interactiva.</p>
+
+    <section class="grid" aria-label="Vistas del proyecto">
+      <a class="card" href="views/login.html">
+        <div class="title">Login mock</div>
+        <div>Ingreso de prueba y persistencia de usuario en localStorage.</div>
+      </a>
+      <a class="card" href="views/lobby-principal.html">
+        <div class="title">Lobby principal</div>
+        <div>Portada de juegos, jackpots y secciones destacadas.</div>
+      </a>
+      <a class="card" href="views/casino-en-vivo.html">
+        <div class="title">Casino en vivo</div>
+        <div>Listado de mesas en tiempo real y acceso a salas.</div>
+      </a>
+      <a class="card" href="views/billetera-cajero.html">
+        <div class="title">Billetera / Cajero</div>
+        <div>Panel de depósitos, retiros y actividad financiera.</div>
+      </a>
+      <a class="card" href="views/ruleta-live.html">
+        <div class="title">Ruleta live</div>
+        <div>Vista de juego con tablero, chat y estadísticas.</div>
+      </a>
+      <a class="card" href="views/en-construccion.html">
+        <div class="title">Página en construcción</div>
+        <div>Destino genérico para rutas no contempladas.</div>
+      </a>
+    </section>
+
+    <p class="foot">Puedes abrir este archivo con doble clic (<code>file://</code>) o servir la carpeta con cualquier servidor estático.</p>
+  </main>
+</body>
+</html>

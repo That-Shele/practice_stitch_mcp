@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login | Obsidian Prestige</title>
+  <title>Login | Obsidian Prestige Casino</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -41,6 +41,15 @@
 </style>
 </head>
 <body class="bg-background text-text font-body min-h-screen">
+<div id="opencode-static-nav" style="background:#090e18;border-bottom:1px solid rgba(255,255,255,.08);padding:8px 12px;font-family:Inter,Arial,sans-serif;position:relative;z-index:10000">
+  <a href="../index.html" style="color:#f5b738;font-weight:700;margin-right:10px;text-decoration:none">Inicio</a>
+  <a href="lobby-principal.html" style="color:#dee2f1;margin-right:10px;text-decoration:none">Lobby</a>
+  <a href="casino-en-vivo.html" style="color:#dee2f1;margin-right:10px;text-decoration:none">Casino en vivo</a>
+  <a href="billetera-cajero.html" style="color:#dee2f1;margin-right:10px;text-decoration:none">Billetera</a>
+  <a href="ruleta-live.html" style="color:#dee2f1;margin-right:10px;text-decoration:none">Ruleta</a>
+  <a href="en-construccion.html" style="color:#dee2f1;text-decoration:none">En construcción</a>
+</div>
+
   <main class="relative min-h-screen grid place-items-center px-4 overflow-hidden">
     <div class="absolute inset-0">
       <img
@@ -82,9 +91,10 @@
       if (!user || !pass) return;
       localStorage.setItem('mock_auth', 'true');
       localStorage.setItem('mock_user', user);
-      window.location.href = '/landing/index.html';
+      window.location.href = 'lobby-principal.html';
     });
   </script>
 </body>
 </html>
+
 

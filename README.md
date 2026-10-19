@@ -1,7 +1,7 @@
 # MCP Practice - Obsidian Prestige (Stitch)
 
 ## Resumen
-Este proyecto integra pantallas generadas en Stitch en una app web con **Node.js + Express**.
+Este proyecto integra pantallas generadas en Stitch en una app web **estática** (HTML/CSS/JS puro, sin build).
 
 Se trabajó con:
 - **OpenCode Desktop**
@@ -9,13 +9,13 @@ Se trabajó con:
 
 ## Desarrollo de formularios
 
-### 1) Login mock (`StitchLanding/login.html`)
+### 1) Login mock (`views/login.html`)
 - Se implementó un formulario de inicio de sesión de prueba.
 - Validación: usuario y contraseña no vacíos.
 - Al enviar:
   - Guarda `mock_auth=true` en `localStorage`.
   - Guarda el usuario en `localStorage` como `mock_user`.
-  - Redirige a `/landing/index.html`.
+  - Redirige a `views/lobby-principal.html`.
 
 ### 2) Integración del usuario en el perfil
 - En las pantallas Stitch con encabezado de perfil, el nombre estático fue reemplazado dinámicamente por el usuario guardado en `mock_user`.
@@ -23,7 +23,7 @@ Se trabajó con:
 
 ### 3) Protección de acceso mock
 - Las pantallas de contenido verifican `mock_auth`.
-- Si no hay sesión mock activa, redirigen a `/landing/login.html`.
+- Si no hay sesión mock activa, redirigen a `views/login.html`.
 
 ## Mejoras visuales
 - Scrollbar personalizada estilo casino (paleta dorado/obsidiana) en todas las pantallas.
@@ -31,43 +31,38 @@ Se trabajó con:
 
 ## Guía para ingresar a las páginas con contenido
 
-1. Instalar dependencias:
+1. Abrir `index.html` con doble clic (modo `file://`) **o** levantar servidor estático opcional:
    ```bash
-   npm install
+   npx serve .
    ```
 
-2. Ejecutar servidor:
-   ```bash
-   npm start
-   ```
+2. En la portada (`index.html`), clic en **"Login mock"**.
 
-3. Abrir `http://localhost:3000/`
-
-4. En el login (pantalla inicial):
+3. En el login (pantalla inicial):
    - Escribir cualquier usuario y contraseña.
    - Clic en **"Ingresar al Casino"**.
 
-5. Ya dentro (vista principal), usar el **menú lateral izquierdo**:
+4. Ya dentro (vista principal), usar el **menú lateral izquierdo**:
    - Clic en **"Lobby Principal"** → abre `lobby-principal.html`.
    - Clic en **"Casino en Vivo"** → abre `casino-en-vivo.html`.
    - Clic en **"Mi Billetera / Cajero"** → abre `billetera-cajero.html`.
    - Clic en **"Juegos de Mesa"** → abre `ruleta-live.html`.
 
-6. Desde **Casino en Vivo** también puedes entrar a una mesa con los botones:
+5. Desde **Casino en Vivo** también puedes entrar a una mesa con los botones:
    - **"Entrar a la Mesa"** / **"Apostar en Vivo"** / **"Tomar Asiento"** (según tarjeta).
    - Estas acciones llevan a flujo de juego o, si no existe pantalla específica, a la vista de construcción.
 
-7. Para salir de la sesión mock:
+6. Para salir de la sesión mock:
    - En el menú lateral, sección **Cuenta & Servicios**, clic en **"Cerrar sesión"**.
 
-### Atajos directos por URL
-- Login: `http://localhost:3000/landing/login.html`
-- Home Stitch: `http://localhost:3000/landing/index.html`
-- Lobby Principal: `http://localhost:3000/landing/lobby-principal.html`
-- Casino en Vivo: `http://localhost:3000/landing/casino-en-vivo.html`
-- Billetera / Cajero: `http://localhost:3000/landing/billetera-cajero.html`
-- Ruleta Live: `http://localhost:3000/landing/ruleta-live.html`
+### Atajos directos por archivo
+- Portada: `index.html`
+- Login: `views/login.html`
+- Lobby Principal: `views/lobby-principal.html`
+- Casino en Vivo: `views/casino-en-vivo.html`
+- Billetera / Cajero: `views/billetera-cajero.html`
+- Ruleta Live: `views/ruleta-live.html`
 
 ## Rutas no contempladas por Stitch
 - Se redirigen a la página genérica de construcción:
-  `http://localhost:3000/landing/en-construccion.html`
+  `views/en-construccion.html`

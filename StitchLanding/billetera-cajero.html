@@ -1,0 +1,548 @@
+??<!DOCTYPE html><html class="dark" lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"on-primary-fixed":"#271900","tertiary-fixed":"#eaddff","surface-bright":"#343944","error-container":"#93000a","on-secondary":"#003824","surface":"#0e131d","secondary-container":"#00a572","outline-variant":"#504534","primary-fixed-dim":"#fbbc3d","outline":"#9d8f7b","on-secondary-fixed":"#002113","secondary-fixed-dim":"#4edea3","primary-fixed":"#ffdea8","on-error-container":"#ffdad6","inverse-on-surface":"#2b303b","on-secondary-container":"#00311f","tertiary-fixed-dim":"#d2bbff","on-primary-fixed-variant":"#5e4200","surface-container":"#1b202a","on-surface":"#dee2f1","surface-container-low":"#171c26","on-primary-container":"#694900","surface-dim":"#0e131d","error":"#ffb4ab","inverse-primary":"#7c5800","primary-container":"#f5b738","surface-container-highest":"#303540","on-background":"#dee2f1","on-surface-variant":"#d4c4ae","on-tertiary":"#3f008e","surface-variant":"#303540","on-tertiary-fixed-variant":"#5a00c6","inverse-surface":"#dee2f1","surface-tint":"#fbbc3d","surface-container-lowest":"#090e18","secondary-fixed":"#6ffbbe","secondary":"#4edea3","surface-container-high":"#252a35","tertiary-container":"#ceb5ff","on-tertiary-fixed":"#25005a","on-primary":"#422d00","on-tertiary-container":"#630fd4","on-error":"#690005","primary":"#ffd896","background":"#0e131d","tertiary":"#e6d6ff","on-secondary-fixed-variant":"#005236"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-sm":"0.75rem","space-xl":"2.5rem","space-lg":"1.5rem","margin":"1.5rem","space-xs":"0.25rem","gutter":"1.25rem","margin-mobile":"1rem","space-md":"1rem","space-sm":"0.5rem","margin-desktop":"2.5rem","gutter-lg":"1.5rem"},"fontFamily":{"badge-caps":["Inter"],"label-numeric-md":["Inter"],"display-lg":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"display-lg-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"headline-xl":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-numeric-lg":["Inter"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"]},"fontSize":{"badge-caps":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"800"}],"label-numeric-md":["14px",{"lineHeight":"18px","letterSpacing":"0.01em","fontWeight":"600"}],"display-lg":["48px",{"lineHeight":"56px","letterSpacing":"-0.02em","fontWeight":"800"}],"body-sm":["12px",{"lineHeight":"16px","fontWeight":"400"}],"display-lg-mobile":["32px",{"lineHeight":"40px","letterSpacing":"-0.01em","fontWeight":"800"}],"headline-sm":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","fontWeight":"400"}],"headline-xl":["36px",{"lineHeight":"44px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-md":["14px",{"lineHeight":"20px","fontWeight":"400"}],"label-numeric-lg":["20px",{"lineHeight":"24px","letterSpacing":"0.02em","fontWeight":"700"}],"headline-xl-mobile":["26px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.01em","fontWeight":"700"}]}}}};</script><script>(function(){try{if(localStorage.getItem("mock_auth")!=="true"){window.location.href="/landing/login.html";}}catch(e){window.location.href="/landing/login.html";}})();</script>
+<style id="obsidian-scrollbar-style">
+  * { scrollbar-width: thin; scrollbar-color: #f5b738 #171c26; }
+  *::-webkit-scrollbar { width: 12px !important; height: 12px !important; display: block !important; }
+  *::-webkit-scrollbar-track { background: #171c26; border-radius: 9999px; }
+  *::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #ffd064 0%, #f5b738 50%, #fbbc3d 100%); border: 2px solid #171c26; border-radius: 9999px; }
+  *::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, #ffe08a 0%, #ffd064 50%, #fbbc3d 100%); }
+</style>
+</head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest z-50 flex flex-col justify-between py-space-md shadow-[0_1px_8px_rgba(0,0,0,0.5)] overflow-y-auto"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-sm px-space-lg"><img alt="Obsidian Casino Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHHJFn9badUHvC2FROtF_SSNhOZgPd-bITvQ6i5ua8Gr0QhLLOiXc6iOg5HOIkDmpfiZHSxaR0ZuiojJtVvffNkTFqfqDlJrUriDggkGTs4zHWWAJ87psKZxx0WRe30Rb0MIALzN5GzDX5-bGvwua5ZrDzqHk3TuOJwvSb2_Pqw6RKPZMKYqzFXt4QtvRm35cHgIoUafDvWWLsaxyZng3O1lPUsa9xMPjpFl8mK8FWkE8rv1ZC_hq9mg"><div class="flex flex-col"><span class="font-headline-sm text-headline-sm font-bold text-primary tracking-tight leading-none">OBSIDIAN</span><span class="font-badge-caps text-badge-caps uppercase tracking-widest text-primary-fixed-dim leading-tight">PRESTIGE CASINO</span></div></div><div class="px-space-md"><div class="px-space-sm pb-space-xs font-badge-caps text-badge-caps uppercase text-on-surface-variant tracking-wider">Salón de Juegos</div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container-highest text-primary font-bold"><a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="lobby-principal" href="/landing/lobby-principal.html"><span class="material-symbols-outlined text-primary">casino</span><span class="font-body-md text-body-md font-semibold">Lobby Principal</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="casino-en-vivo" href="/landing/casino-en-vivo.html"><span class="material-symbols-outlined text-tertiary">live_tv</span><span class="font-body-md text-body-md font-semibold">Casino en Vivo</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="tragaperras-slots" href="/landing/en-construccion.html?page=tragaperras-slots"><span class="material-symbols-outlined text-secondary">stadia_controller</span><span class="font-body-md text-body-md font-semibold">Tragaperras (Slots)</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="juegos-de-mesa" href="/landing/ruleta-live.html"><span class="material-symbols-outlined text-primary-fixed">playing_cards</span><span class="font-body-md text-body-md font-semibold">Juegos de Mesa</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="jackpots-progresivos" href="/landing/en-construccion.html?page=jackpots-progresivos"><span class="material-symbols-outlined text-primary-fixed-dim">local_fire_department</span><span class="font-body-md text-body-md font-semibold">Jackpots Progresivos</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="promociones-torneos" href="/landing/en-construccion.html?page=promociones-torneos"><span class="material-symbols-outlined text-tertiary-fixed">trophy</span><span class="font-body-md text-body-md font-semibold">Promociones &amp; Torneos</span></a></nav></div><div class="px-space-md"><div class="px-space-sm pb-space-xs font-badge-caps text-badge-caps uppercase text-on-surface-variant tracking-wider">Cuenta &amp; Servicios</div><nav class="flex flex-col gap-1" data-active-classes="bg-surface-container-highest text-primary font-bold"><a aria-current="page" class="flex items-center gap-3 px-space-md py-space-sm rounded-lg transition-colors bg-surface-container-highest text-primary font-bold" data-path="billetera-y-cajero" href="/landing/billetera-cajero.html"><span class="material-symbols-outlined text-secondary">account_balance_wallet</span><span class="font-body-md text-body-md font-semibold">Mi Billetera / Cajero</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="historial-de-apuestas" href="/landing/en-construccion.html?page=historial-de-apuestas"><span class="material-symbols-outlined text-outline">history</span><span class="font-body-md text-body-md font-semibold">Historial de Apuestas</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="club-vip-prestige" href="/landing/en-construccion.html?page=club-vip-prestige"><span class="material-symbols-outlined text-primary">workspace_premium</span><span class="font-body-md text-body-md font-semibold">Club VIP Prestige</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="soporte-24-7" href="/landing/en-construccion.html?page=soporte-24-7"><span class="material-symbols-outlined text-tertiary">headset_mic</span><span class="font-body-md text-body-md font-semibold">Soporte 24/7</span></a><a class="flex items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="juego-responsable" href="/landing/en-construccion.html?page=juego-responsable"><span class="material-symbols-outlined text-secondary-fixed-dim">health_and_safety</span><span class="font-body-md text-body-md font-semibold">Juego Responsable</span></a></nav></div></div><div class="px-space-md pt-space-md"><div class="bg-surface-container rounded-xl p-space-md shadow-[0_0_24px_-4px_rgba(245,183,56,0.22)]"><div class="flex items-center justify-between pb-space-xs"><span class="font-badge-caps text-badge-caps text-primary uppercase font-bold flex items-center gap-1"><span class="material-symbols-outlined text-primary text-sm">bolt</span> MEGA JACKPOT</span><span class="flex h-2 w-2 rounded-full bg-secondary animate-pulse"></span></div><div class="font-label-numeric-lg text-label-numeric-lg text-primary-fixed font-bold tracking-tight">$3,489,120.45</div><div class="flex justify-between items-center text-on-surface-variant font-body-sm text-body-sm pt-space-xs"><span class="">Obsidian Gold Rush</span><span class="text-secondary font-bold">+3.8%</span></div></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-20 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.3)] z-40 flex items-center justify-between px-gutter-lg"><div class="flex items-center gap-gutter flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span><input class="w-full bg-surface-container-lowest text-on-surface pl-10 pr-4 py-2 rounded-lg font-body-md text-body-md placeholder-outline focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Buscar slots, ruletas, blackjack o proveedores..." type="text"></div></div><div class="flex items-center gap-gutter"><div class="hidden lg:flex items-center gap-space-sm bg-surface-container-low px-space-md py-1.5 rounded-full shadow-[0_0_20px_-4px_rgba(124,58,237,0.35)]"><span class="material-symbols-outlined text-tertiary-fixed-dim text-base">diamond</span><span class="font-badge-caps text-badge-caps text-tertiary uppercase">Platinum VIP</span></div><div class="flex items-center gap-space-sm bg-surface-container-low px-space-md py-1.5 rounded-lg"><div class="flex flex-col items-end"><span class="font-body-sm text-body-sm text-on-surface-variant uppercase tracking-wider leading-none">Balance Real</span><span class="font-label-numeric-md text-label-numeric-md font-bold text-secondary leading-tight">$24,850.00 <span class="text-xs text-on-surface-variant">USD</span></span></div><span class="material-symbols-outlined text-outline text-base">sync</span></div><button class="flex items-center gap-2 bg-gradient-to-r from-primary-container to-primary text-on-primary font-bold px-space-md py-2 rounded-lg hover:shadow-[0_0_24px_-4px_rgba(245,183,56,0.35)] transition-all font-body-md text-body-md"><span class="material-symbols-outlined font-bold text-base">add_circle</span><span class="">Depositar</span></button><button class="relative p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-error"></span></button><div class="flex items-center gap-1 text-on-surface-variant hover:text-on-surface cursor-pointer px-2 py-1 rounded-lg hover:bg-surface-container-high transition-colors"><span class="material-symbols-outlined text-base">translate</span><span class="font-body-sm text-body-sm uppercase font-bold">ES</span><span class="material-symbols-outlined text-sm">expand_more</span></div><div class="flex items-center gap-3 pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-primary-fixed-dim" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSH-lwkAFH_KfQUNg90eBCZ73KeqC54e3-WQ9A_avRU-nXiFcAJ_e6Zh2-np7ud1_s544f5XeSBwbaOMW0ZVguxMHtaXhf24Frx1TH15pQAFwMX_HFp8sTJgepeuihGqMme3wBwMvxMHvtYtIKxqoZrFrEDete-scv45SPTvO2GPm-siU7JD_HTL0qahHDHK3LBC55SI29jWrBOnn69KfjGLqlGPNs_3ZHXvMkmfX2BUpiIG7RkGR-wA"><div class="hidden xl:flex flex-col"><span class="font-body-md text-body-md font-semibold text-on-surface leading-tight">Jugador VIP</span><span class="font-body-sm text-body-sm text-outline leading-none">ID: #88921-VIP</span></div></div></div></header><main class="w-full pt-20 bg-background flex-1"><div class="flex flex-col w-full">
+<!-- Subtle Ambient Glow Orbs (Contained) -->
+<div class="relative w-full overflow-hidden px-gutter-lg py-space-lg flex flex-col gap-space-lg">
+<div class="absolute -top-32 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 -right-24 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Section 1: Top Financial Overview Cards (Bento Metric Trio) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter w-full relative z-10"><!-- Card 1: Saldo Total Breakdown (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container rounded-xl p-space-lg shadow-lg relative flex flex-col justify-between"><div class="flex items-center justify-between pb-1">
+  <div class="flex flex-col">
+    <span class="font-badge-caps text-badge-caps uppercase tracking-wider text-outline">4. Pasarela de Pago</span>
+    <span class="text-base text-on-surface font-bold">Transferir USDT (TRC-20)</span>
+  </div>
+  <span class="text-xs text-outline flex items-center gap-1">
+    <span class="material-symbols-outlined text-sm text-secondary">speed</span> &lt; 2 min
+  </span>
+</div>
+
+<!-- Center QR Mockup -->
+<div class="flex flex-col items-center justify-center p-space-md bg-surface-container-lowest/60 rounded-xl relative">
+  <div class="p-3 bg-on-surface rounded-xl shadow-lg">
+    <svg class="w-40 h-40 text-surface-container-lowest" fill="currentColor" viewBox="0 0 100 100">
+      <rect height="22" rx="3" width="22" x="5" y="5"></rect>
+      <rect fill="#dee2f1" height="16" rx="2" width="16" x="8" y="8"></rect>
+      <rect height="10" rx="1" width="10" x="11" y="11"></rect>
+      <rect height="22" rx="3" width="22" x="73" y="5"></rect>
+      <rect fill="#dee2f1" height="16" rx="2" width="16" x="76" y="8"></rect>
+      <rect height="10" rx="1" width="10" x="79" y="11"></rect>
+      <rect height="22" rx="3" width="22" x="5" y="73"></rect>
+      <rect fill="#dee2f1" height="16" rx="2" width="16" x="8" y="76"></rect>
+      <rect height="10" rx="1" width="10" x="11" y="79"></rect>
+      <rect height="5" width="5" x="32" y="7"></rect>
+      <rect height="5" width="8" x="42" y="7"></rect>
+      <rect height="5" width="12" x="55" y="7"></rect>
+      <rect height="5" width="10" x="32" y="17"></rect>
+      <rect height="8" width="6" x="47" y="17"></rect>
+      <rect height="5" width="9" x="58" y="17"></rect>
+      <rect height="6" width="6" x="7" y="32"></rect>
+      <rect height="6" width="9" x="18" y="32"></rect>
+      <rect height="5" width="9" x="7" y="43"></rect>
+      <rect height="8" width="6" x="21" y="43"></rect>
+      <rect height="6" width="14" x="7" y="53"></rect>
+      <rect height="4" width="7" x="7" y="64"></rect>
+      <rect height="4" width="8" x="19" y="64"></rect>
+      <rect fill="#0e131d" height="36" rx="4" width="36" x="32" y="32"></rect>
+      <circle cx="50" cy="50" fill="#f5b738" r="12"></circle>
+      <polygon fill="#271900" points="50,42 56,53 44,53"></polygon>
+      <rect height="5" width="8" x="73" y="32"></rect>
+      <rect height="5" width="9" x="86" y="32"></rect>
+      <rect height="5" width="12" x="73" y="42"></rect>
+      <rect height="9" width="6" x="73" y="52"></rect>
+      <rect height="5" width="11" x="84" y="52"></rect>
+      <rect height="4" width="22" x="73" y="66"></rect>
+      <rect height="6" width="8" x="32" y="73"></rect>
+      <rect height="5" width="10" x="45" y="73"></rect>
+      <rect height="6" width="8" x="60" y="73"></rect>
+      <rect height="5" width="14" x="32" y="84"></rect>
+      <rect height="5" width="14" x="51" y="84"></rect>
+      <rect height="5" width="9" x="70" y="84"></rect>
+      <rect height="5" width="11" x="84" y="84"></rect>
+    </svg>
+  </div>
+  <span class="text-xs text-outline mt-3">Escanea desde cualquier billetera TRC-20</span>
+</div>
+
+<!-- Address String & Copy Button -->
+<div class="flex flex-col gap-1">
+  <div class="flex items-center justify-between text-xs text-outline">
+    <span class="">Dirección (TRC-20)</span>
+    <span class="font-mono">Red Tron</span>
+  </div>
+  <div class="flex items-center gap-2 bg-surface-container-lowest p-1.5 rounded-lg">
+    <input class="flex-1 bg-transparent font-mono text-xs text-primary px-2 focus:outline-none select-all truncate" id="depositAddressInput" readonly="" type="text" value="TX8bK9pL2qZMNvr84YkXwF1d2A3b9xYQpo">
+    <button class="flex items-center gap-1 px-3 py-1.5 rounded-md bg-surface-container-high hover:bg-surface-container-highest text-on-surface text-xs font-semibold transition-all shrink-0" id="copyAddressBtn" onclick="navigator.clipboard.writeText('TX8bK9pL2qZMNvr84YkXwF1d2A3b9xYQpo'); const b=this; b.classList.add('bg-secondary','text-on-secondary'); b.innerHTML='&lt;span class=\'material-symbols-outlined text-xs\' &gt;done&lt;/span&gt; Copiado'; setTimeout(()=&gt;{ b.classList.remove('bg-secondary','text-on-secondary'); b.innerHTML='&lt;span class=\'material-symbols-outlined text-xs\' &gt;content_copy&lt;/span&gt; Copiar'; }, 2000);">
+      <span class="material-symbols-outlined text-xs">content_copy</span>
+      <span class="">Copiar</span>
+    </button>
+  </div>
+</div>
+
+<!-- Minimal Summary Telemetry -->
+<div class="flex items-center justify-between py-2 px-3 bg-surface-container-low rounded-lg text-xs text-outline">
+  <div class="">Confirmaciones: <span class="text-on-surface font-semibold">1 red</span></div>
+  <div class="">Llegada: <span class="text-secondary font-semibold">Instantáneo</span></div>
+  <div class="">Depósito mín: <span class="text-on-surface font-semibold">10 USDT</span></div>
+</div></div>
+
+<!-- Card 2: Requisito de Apuesta (4 cols) -->
+<div class="lg:col-span-4 bg-surface-container rounded-xl p-space-lg shadow-lg flex flex-col justify-between relative">
+  <div class="flex flex-col gap-2">
+    <div class="flex items-center justify-between text-on-surface-variant font-body-sm">
+      <span class="uppercase font-badge-caps tracking-wider text-outline">Requisito de Apuesta</span>
+      <span class="font-label-numeric-md text-primary font-bold">68%</span>
+    </div>
+    <div class="flex items-baseline justify-between mt-1">
+      <div class="font-headline-md text-headline-md text-on-surface font-bold">
+        $3,400 <span class="text-sm text-outline font-normal">/ $5,000 USD</span>
+      </div>
+      <span class="text-xs text-secondary font-semibold">Faltan $1,600</span>
+    </div>
+    <div class="w-full bg-surface-container-lowest h-2 rounded-full overflow-hidden mt-3">
+      <div class="bg-primary h-full rounded-full transition-all" style="width: 68%;"></div>
+    </div>
+  </div>
+  <div class="flex items-center justify-between pt-space-md mt-space-md border-t border-surface-container-highest/60 text-body-sm font-body-sm">
+    <span class="text-on-surface-variant text-xs">Bono VIP Match 100%</span>
+    <span class="text-outline text-xs">Expira en 14d</span>
+  </div>
+</div>
+
+<!-- Card 3: Nivel VIP (3 cols) -->
+<div class="lg:col-span-3 bg-surface-container rounded-xl p-space-lg shadow-lg flex flex-col justify-between relative">
+  <div>
+    <div class="flex items-center justify-between">
+      <span class="uppercase font-badge-caps tracking-wider text-outline text-xs">Rango del Jugador</span>
+      <span class="material-symbols-outlined text-tertiary text-sm">diamond</span>
+    </div>
+    <div class="mt-2">
+      <span class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">Platinum Tier</span>
+      <span class="text-xs text-outline block mt-0.5">Cajero Preferencial Habilitado</span>
+    </div>
+  </div>
+  <div class="flex flex-col gap-1.5 pt-space-md mt-space-md border-t border-surface-container-highest/60 text-xs">
+    <div class="flex items-center justify-between text-outline">
+      <span class="">Límite mensual</span>
+      <span class="font-semibold text-on-surface">$150,000 USD</span>
+    </div>
+    <div class="flex items-center justify-between text-secondary">
+      <span class="">Retiro express</span>
+      <span class="font-semibold">Instantáneo</span>
+    </div>
+  </div>
+</div></div>
+<!-- Section 2: Cashier Navigation Tabs -->
+<div class="w-full bg-surface-container-low p-1.5 rounded-xl flex flex-wrap items-center gap-1 shadow-md"><button class="flex items-center gap-2 px-space-md py-2 rounded-lg bg-surface-container text-primary font-semibold text-sm transition-all">
+  <span class="material-symbols-outlined text-base">download</span>
+  <span class="">Depositar</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-colors text-sm font-medium">
+  <span class="material-symbols-outlined text-base">upload</span>
+  <span class="">Retirar Fondos</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-colors text-sm font-medium">
+  <span class="material-symbols-outlined text-base">receipt_long</span>
+  <span class="">Historial</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container/60 transition-colors text-sm font-medium">
+  <span class="material-symbols-outlined text-base">tune</span>
+  <span class="">Límites de Seguridad</span>
+</button></div>
+<!-- Section 3: Deposit Main Layout (Split Bento Matrix) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Configuration Panel: Gateways & Deposit Settings (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container rounded-xl p-space-lg shadow-xl flex flex-col gap-space-lg"><!-- Category Selector -->
+<div class="flex flex-col gap-space-sm">
+  <span class="font-badge-caps text-badge-caps uppercase tracking-wider text-outline">1. Canal de Pago</span>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm">
+    <!-- Active: Crypto -->
+    <button class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-high text-left">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+          <span class="material-symbols-outlined text-xl">currency_bitcoin</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-sm font-bold text-on-surface leading-tight">Criptomonedas</span>
+          <span class="text-xs text-secondary mt-0.5">Instantáneo • 0% Fee</span>
+        </div>
+      </div>
+      <span class="material-symbols-outlined text-primary text-lg">check_circle</span>
+    </button>
+    <!-- Cards -->
+    <button class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container-high/60 transition-colors text-left">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-outline">
+          <span class="material-symbols-outlined text-xl">credit_card</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-sm font-medium text-on-surface leading-tight">Tarjetas Bancarias</span>
+          <span class="text-xs text-outline mt-0.5">Visa / Mastercard</span>
+        </div>
+      </div>
+    </button>
+    <!-- E-Wallets -->
+    <button class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container-high/60 transition-colors text-left">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-outline">
+          <span class="material-symbols-outlined text-xl">account_balance_wallet</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-sm font-medium text-on-surface leading-tight">Monederos Digitales</span>
+          <span class="text-xs text-outline mt-0.5">Skrill, Neteller</span>
+        </div>
+      </div>
+    </button>
+    <!-- Bank Transfer -->
+    <button class="flex items-center justify-between p-3.5 rounded-xl bg-surface-container-low hover:bg-surface-container-high/60 transition-colors text-left">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-outline">
+          <span class="material-symbols-outlined text-xl">account_balance</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="text-sm font-medium text-on-surface leading-tight">Transferencia Bancaria</span>
+          <span class="text-xs text-outline mt-0.5">Bancos Locales</span>
+        </div>
+      </div>
+    </button>
+  </div>
+</div>
+
+<!-- Crypto Currency Selector -->
+<div class="flex flex-col gap-space-sm">
+  <div class="flex items-center justify-between">
+    <span class="font-badge-caps text-badge-caps uppercase tracking-wider text-outline">2. Seleccione Activo Cripto</span>
+    <span class="text-xs text-secondary flex items-center gap-1">
+      <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Red Activa
+    </span>
+  </div>
+  <div class="grid grid-cols-2 sm:grid-cols-5 gap-2">
+    <button class="flex flex-col items-center gap-1 p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high/60 transition-colors">
+      <span class="material-symbols-outlined text-primary text-xl">currency_bitcoin</span>
+      <span class="text-xs font-bold text-on-surface">BTC</span>
+      <span class="text-xs text-outline">Bitcoin</span>
+    </button>
+    <button class="flex flex-col items-center gap-1 p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high/60 transition-colors">
+      <span class="material-symbols-outlined text-outline text-xl">diamond</span>
+      <span class="text-xs font-bold text-on-surface">ETH</span>
+      <span class="text-xs text-outline">ERC-20</span>
+    </button>
+    <!-- Active: USDT -->
+    <button class="flex flex-col items-center gap-1 p-2.5 rounded-lg bg-surface-container-high relative">
+      <span class="material-symbols-outlined text-secondary text-xl">paid</span>
+      <span class="text-xs font-bold text-primary">USDT</span>
+      <span class="text-xs text-secondary font-medium">TRC-20</span>
+    </button>
+    <button class="flex flex-col items-center gap-1 p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high/60 transition-colors">
+      <span class="material-symbols-outlined text-outline text-xl">toll</span>
+      <span class="text-xs font-bold text-on-surface">USDC</span>
+      <span class="text-xs text-outline">Multi-chain</span>
+    </button>
+    <button class="flex flex-col items-center gap-1 p-2.5 rounded-lg bg-surface-container-low hover:bg-surface-container-high/60 transition-colors">
+      <span class="material-symbols-outlined text-outline text-xl">electric_bolt</span>
+      <span class="text-xs font-bold text-on-surface">SOL</span>
+      <span class="text-xs text-outline">Solana</span>
+    </button>
+  </div>
+</div>
+
+<!-- Presets and Custom Amount -->
+<div class="flex flex-col gap-space-sm">
+  <span class="font-badge-caps text-badge-caps uppercase tracking-wider text-outline">3. Monto a Depositar (USD)</span>
+  <div class="grid grid-cols-2 sm:grid-cols-5 gap-2">
+    <button class="py-2 rounded-lg bg-surface-container-low hover:bg-surface-container-high/60 text-xs font-semibold text-on-surface transition-colors">$100</button>
+    <button class="py-2 rounded-lg bg-surface-container-low hover:bg-surface-container-high/60 text-xs font-semibold text-on-surface transition-colors">$250</button>
+    <!-- Selected -->
+    <button class="py-2 rounded-lg bg-surface-container-high text-primary text-xs font-bold">$500</button>
+    <button class="py-2 rounded-lg bg-surface-container-low hover:bg-surface-container-high/60 text-xs font-semibold text-on-surface transition-colors">$1,000</button>
+    <button class="py-2 rounded-lg bg-surface-container-low hover:bg-surface-container-high/60 text-xs font-semibold text-primary transition-colors">$5,000</button>
+  </div>
+  <div class="relative w-full mt-1">
+    <span class="absolute left-3.5 top-1/2 -translate-y-1/2 font-bold text-outline text-base">$</span>
+    <input class="w-full bg-surface-container-lowest text-on-surface font-headline-sm text-headline-sm font-bold pl-8 pr-28 py-2.5 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary" type="text" value="500.00">
+    <div class="absolute right-3 top-1/2 -translate-y-1/2 text-outline font-body-sm text-xs">
+      ≈ 500.00 USDT
+    </div>
+  </div>
+</div>
+
+<!-- Promo Code VIP Section -->
+<div class="flex flex-col gap-1.5 bg-surface-container-low/60 p-space-md rounded-xl">
+  <div class="flex items-center justify-between text-xs">
+    <span class="font-badge-caps text-badge-caps uppercase tracking-wider text-outline">Cupón Aplicado</span>
+    <span class="text-secondary font-medium">Activo</span>
+  </div>
+  <div class="flex items-center justify-between text-xs text-on-surface mt-0.5">
+    <span class="font-mono font-bold text-secondary text-sm">BONUSVIP200</span>
+    <button class="text-outline hover:text-on-surface transition-colors text-xs">Cambiar</button>
+  </div>
+  <p class="text-xs text-outline mt-1">
+    Bono: <span class="text-on-surface font-medium">+100% Recarga VIP ($500.00 bono)</span> con rollover 15x.
+  </p>
+</div></div>
+<!-- Right Action Panel: Interactive QR & Wallet Address (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container rounded-xl p-space-lg shadow-xl flex flex-col gap-space-lg relative overflow-hidden"><div class="flex items-center justify-between pb-1">
+  <div class="flex flex-col">
+    <span class="font-badge-caps text-badge-caps uppercase tracking-wider text-outline">4. Pasarela de Pago</span>
+    <span class="text-base text-on-surface font-bold">Transferir USDT (TRC-20)</span>
+  </div>
+  <span class="text-xs text-outline flex items-center gap-1">
+    <span class="material-symbols-outlined text-sm text-secondary">speed</span> &lt; 2 min
+  </span>
+</div>
+
+<!-- Center QR Mockup -->
+<div class="flex flex-col items-center justify-center p-space-md bg-surface-container-lowest/60 rounded-xl relative">
+  <div class="p-3 bg-on-surface rounded-xl shadow-lg">
+    <svg class="w-40 h-40 text-surface-container-lowest" fill="currentColor" viewBox="0 0 100 100">
+      <rect height="22" rx="3" width="22" x="5" y="5"></rect>
+      <rect fill="#dee2f1" height="16" rx="2" width="16" x="8" y="8"></rect>
+      <rect height="10" rx="1" width="10" x="11" y="11"></rect>
+      <rect height="22" rx="3" width="22" x="73" y="5"></rect>
+      <rect fill="#dee2f1" height="16" rx="2" width="16" x="76" y="8"></rect>
+      <rect height="10" rx="1" width="10" x="79" y="11"></rect>
+      <rect height="22" rx="3" width="22" x="5" y="73"></rect>
+      <rect fill="#dee2f1" height="16" rx="2" width="16" x="8" y="76"></rect>
+      <rect height="10" rx="1" width="10" x="11" y="79"></rect>
+      <rect height="5" width="5" x="32" y="7"></rect>
+      <rect height="5" width="8" x="42" y="7"></rect>
+      <rect height="5" width="12" x="55" y="7"></rect>
+      <rect height="5" width="10" x="32" y="17"></rect>
+      <rect height="8" width="6" x="47" y="17"></rect>
+      <rect height="5" width="9" x="58" y="17"></rect>
+      <rect height="6" width="6" x="7" y="32"></rect>
+      <rect height="6" width="9" x="18" y="32"></rect>
+      <rect height="5" width="9" x="7" y="43"></rect>
+      <rect height="8" width="6" x="21" y="43"></rect>
+      <rect height="6" width="14" x="7" y="53"></rect>
+      <rect height="4" width="7" x="7" y="64"></rect>
+      <rect height="4" width="8" x="19" y="64"></rect>
+      <rect fill="#0e131d" height="36" rx="4" width="36" x="32" y="32"></rect>
+      <circle cx="50" cy="50" fill="#f5b738" r="12"></circle>
+      <polygon fill="#271900" points="50,42 56,53 44,53"></polygon>
+      <rect height="5" width="8" x="73" y="32"></rect>
+      <rect height="5" width="9" x="86" y="32"></rect>
+      <rect height="5" width="12" x="73" y="42"></rect>
+      <rect height="9" width="6" x="73" y="52"></rect>
+      <rect height="5" width="11" x="84" y="52"></rect>
+      <rect height="4" width="22" x="73" y="66"></rect>
+      <rect height="6" width="8" x="32" y="73"></rect>
+      <rect height="5" width="10" x="45" y="73"></rect>
+      <rect height="6" width="8" x="60" y="73"></rect>
+      <rect height="5" width="14" x="32" y="84"></rect>
+      <rect height="5" width="14" x="51" y="84"></rect>
+      <rect height="5" width="9" x="70" y="84"></rect>
+      <rect height="5" width="11" x="84" y="84"></rect>
+    </svg>
+  </div>
+  <span class="text-xs text-outline mt-3">Escanea desde cualquier billetera TRC-20</span>
+</div>
+
+<!-- Address String & Copy Button -->
+<div class="flex flex-col gap-1">
+  <div class="flex items-center justify-between text-xs text-outline">
+    <span class="">Dirección (TRC-20)</span>
+    <span class="font-mono">Red Tron</span>
+  </div>
+  <div class="flex items-center gap-2 bg-surface-container-lowest p-1.5 rounded-lg">
+    <input class="flex-1 bg-transparent font-mono text-xs text-primary px-2 focus:outline-none select-all truncate" id="depositAddressInput" readonly="" type="text" value="TX8bK9pL2qZMNvr84YkXwF1d2A3b9xYQpo">
+    <button class="flex items-center gap-1 px-3 py-1.5 rounded-md bg-surface-container-high hover:bg-surface-container-highest text-on-surface text-xs font-semibold transition-all shrink-0" id="copyAddressBtn" onclick="navigator.clipboard.writeText('TX8bK9pL2qZMNvr84YkXwF1d2A3b9xYQpo'); const b=this; b.classList.add('bg-secondary','text-on-secondary'); b.innerHTML='&lt;span class=\'material-symbols-outlined text-xs\' &gt;done&lt;/span&gt; Copiado'; setTimeout(()=&gt;{ b.classList.remove('bg-secondary','text-on-secondary'); b.innerHTML='&lt;span class=\'material-symbols-outlined text-xs\' &gt;content_copy&lt;/span&gt; Copiar'; }, 2000);">
+      <span class="material-symbols-outlined text-xs">content_copy</span>
+      <span class="">Copiar</span>
+    </button>
+  </div>
+</div>
+
+<!-- Minimal Summary Telemetry -->
+<div class="flex items-center justify-between py-2 px-3 bg-surface-container-low rounded-lg text-xs text-outline">
+  <div class="">Confirmaciones: <span class="text-on-surface font-semibold">1 red</span></div>
+  <div class="">Llegada: <span class="text-secondary font-semibold">Instantáneo</span></div>
+  <div class="">Depósito mín: <span class="text-on-surface font-semibold">10 USDT</span></div>
+</div></div>
+</div>
+<!-- Section 4: Security & Compliance Trust Bar (Triple Banner) -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter w-full"><div class="flex items-center gap-3 bg-surface-container/60 p-space-md rounded-xl border border-surface-container-highest/40">
+  <span class="material-symbols-outlined text-outline text-xl">lock</span>
+  <div class="flex flex-col">
+    <span class="text-sm font-bold text-on-surface leading-tight">Cifrado SSL 256-Bit</span>
+    <span class="text-xs text-outline mt-0.5">Protección punto a punto y firma biométrica.</span>
+  </div>
+</div>
+<div class="flex items-center gap-3 bg-surface-container/60 p-space-md rounded-xl border border-surface-container-highest/40">
+  <span class="material-symbols-outlined text-outline text-xl">account_balance</span>
+  <div class="flex flex-col">
+    <span class="text-sm font-bold text-on-surface leading-tight">Fondos Segregados</span>
+    <span class="text-xs text-outline mt-0.5">Custodia en entidades europeas Tier 1.</span>
+  </div>
+</div>
+<div class="flex items-center gap-3 bg-surface-container/60 p-space-md rounded-xl border border-surface-container-highest/40">
+  <span class="material-symbols-outlined text-outline text-xl">verified_user</span>
+  <div class="flex flex-col">
+    <span class="text-sm font-bold text-on-surface leading-tight">Regulación KYC &amp; AML</span>
+    <span class="text-xs text-outline mt-0.5">Cumplimiento estricto y auditorías periódicas.</span>
+  </div>
+</div></div>
+<!-- Section 5: Recent Transactions Mini-Table -->
+<div class="bg-surface-container rounded-xl p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">history</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">Actividad Financiera Reciente</span>
+</div>
+<button class="font-body-sm text-body-sm text-primary hover:text-primary-fixed-dim font-bold transition-colors flex items-center gap-1">
+<span class="">Ver libro mayor completo</span>
+<span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="w-full overflow-x-auto">
+<table class="w-full text-left font-body-md text-body-md"><thead>
+  <tr class="text-outline text-xs uppercase font-badge-caps border-b border-surface-container-highest/60">
+    <th class="py-3 px-space-md font-medium">Fecha</th>
+    <th class="py-3 px-space-md font-medium">Tipo</th>
+    <th class="py-3 px-space-md font-medium">Método</th>
+    <th class="py-3 px-space-md font-medium">ID</th>
+    <th class="py-3 px-space-md text-right font-medium">Monto</th>
+    <th class="py-3 px-space-md text-right font-medium">Estado</th>
+  </tr>
+</thead>
+<tbody class="divide-y-0 text-xs">
+  <tr class="hover:bg-surface-container-high/40 transition-colors border-b border-surface-container-highest/30">
+    <td class="py-3 px-space-md text-on-surface font-medium">Hoy, 14:32</td>
+    <td class="py-3 px-space-md text-outline">Depósito</td>
+    <td class="py-3 px-space-md text-on-surface font-medium">USDT (TRC-20)</td>
+    <td class="py-3 px-space-md font-mono text-outline">#TX-99824102</td>
+    <td class="py-3 px-space-md text-right font-bold text-secondary">+$1,000.00</td>
+    <td class="py-3 px-space-md text-right text-secondary font-medium">Completado</td>
+  </tr>
+  <tr class="hover:bg-surface-container-high/40 transition-colors border-b border-surface-container-highest/30">
+    <td class="py-3 px-space-md text-on-surface font-medium">Ayer, 21:05</td>
+    <td class="py-3 px-space-md text-outline">Retiro VIP</td>
+    <td class="py-3 px-space-md text-on-surface font-medium">Bitcoin (BTC)</td>
+    <td class="py-3 px-space-md font-mono text-outline">#TX-99801455</td>
+    <td class="py-3 px-space-md text-right font-bold text-on-surface">-$4,200.00</td>
+    <td class="py-3 px-space-md text-right text-secondary font-medium">Completado</td>
+  </tr>
+  <tr class="hover:bg-surface-container-high/40 transition-colors border-b border-surface-container-highest/30">
+    <td class="py-3 px-space-md text-on-surface font-medium">15 Nov, 08:44</td>
+    <td class="py-3 px-space-md text-outline">Retiro</td>
+    <td class="py-3 px-space-md text-on-surface font-medium">Ethereum (ETH)</td>
+    <td class="py-3 px-space-md font-mono text-outline">#TX-99784310</td>
+    <td class="py-3 px-space-md text-right font-bold text-on-surface">-$2,500.00</td>
+    <td class="py-3 px-space-md text-right text-primary font-medium">En Proceso</td>
+  </tr>
+  <tr class="hover:bg-surface-container-high/40 transition-colors">
+    <td class="py-3 px-space-md text-on-surface font-medium">12 Nov, 19:10</td>
+    <td class="py-3 px-space-md text-outline">Depósito</td>
+    <td class="py-3 px-space-md text-on-surface font-medium">Visa Platinum •••• 4092</td>
+    <td class="py-3 px-space-md font-mono text-outline">#TX-99712034</td>
+    <td class="py-3 px-space-md text-right font-bold text-secondary">+$500.00</td>
+    <td class="py-3 px-space-md text-right text-secondary font-medium">Completado</td>
+  </tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest py-space-lg px-gutter-lg mt-auto shadow-[0_-1px_8px_rgba(0,0,0,0.3)]"><div class="w-full flex flex-col gap-space-lg"><div class="flex flex-wrap items-center justify-between gap-space-md pb-space-md bg-surface-container-low/40 p-space-md rounded-xl"><div class="flex flex-col gap-1">
+  <span class="font-badge-caps text-badge-caps uppercase text-outline">Licencias &amp; Regulación</span>
+  <div class="flex items-center gap-4 text-outline font-body-sm text-xs">
+    <span class="">Curacao eGaming #1668/JAZ</span>
+    <span class="">•</span>
+    <span class="">MGA/B2C/394/2018</span>
+    <span class="">•</span>
+    <span class="">eCOGRA Certificado</span>
+  </div>
+</div>
+<div class="flex flex-col gap-1">
+  <span class="font-badge-caps text-badge-caps uppercase text-outline">Juego Responsable</span>
+  <div class="flex items-center gap-3 text-outline text-xs">
+    <span class="font-semibold text-on-surface">18+</span>
+    <span class="">GamCare Safe</span>
+    <span class="">BeGambleAware.org</span>
+  </div>
+</div>
+<div class="flex flex-col gap-1">
+  <span class="font-badge-caps text-badge-caps uppercase text-outline">Pagos Aceptados</span>
+  <div class="flex items-center gap-2 text-outline text-xs">
+    <span class="">VISA</span>
+    <span class="">•</span>
+    <span class="">Mastercard</span>
+    <span class="">•</span>
+    <span class="">Crypto</span>
+    <span class="">•</span>
+    <span class="">Skrill</span>
+    <span class="">•</span>
+    <span class="">Apple Pay</span>
+  </div>
+</div></div><div class="flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-body-sm text-body-sm"><div class="flex items-center gap-space-md"><a class="hover:text-primary transition-colors" href="/landing/en-construccion.html">Términos &amp; Condiciones Generales</a><span class="">•</span><a class="hover:text-primary transition-colors" href="/landing/en-construccion.html">Política de Privacidad &amp; Cookies</a><span class="">•</span><a class="hover:text-primary transition-colors" href="/landing/en-construccion.html">Certificado de Integridad RNG</a><span class="">•</span><a class="hover:text-primary transition-colors" href="/landing/en-construccion.html">Autoexclusión &amp; Límites</a></div><div class="">© 2024 Obsidian Prestige Casino N.V. Todos los derechos reservados. Operado bajo legislación de juego internacional.</div></div></div></footer></div>
+
+
+<script id="mock-user-profile-script">
+(function () {
+  function logout() {
+    localStorage.removeItem('mock_auth');
+    localStorage.removeItem('mock_user');
+    window.location.href = '/landing/login.html';
+  }
+
+  function mountLogoutButton() {
+    if (document.getElementById('mock-logout-btn')) return;
+
+    const accountNavAnchor =
+      document.querySelector('a[data-path="juego-responsable"]') ||
+      document.querySelector('a[data-path="soporte-24-7"]') ||
+      document.querySelector('a[data-path="club-vip-prestige"]');
+
+    const accountNav = accountNavAnchor
+      ? accountNavAnchor.closest('nav')
+      : document.querySelector('aside nav:last-of-type');
+
+    if (!accountNav) return;
+
+    const logoutBtn = document.createElement('button');
+    logoutBtn.id = 'mock-logout-btn';
+    logoutBtn.type = 'button';
+    logoutBtn.className = 'flex w-full items-center gap-3 px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors';
+    logoutBtn.innerHTML = '<span class="material-symbols-outlined text-error">logout</span><span class="font-body-md text-body-md font-semibold">Cerrar sesión</span>';
+
+    logoutBtn.addEventListener('click', logout);
+    accountNav.appendChild(logoutBtn);
+  }
+
+  function updateProfileName() {
+    const storedName = (localStorage.getItem('mock_user') || '').trim();
+    const userName = storedName || 'Jugador VIP';
+    const aliases = ['Jugador VIP', 'Alexander M.', 'Alexander M'];
+
+    const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+    let node;
+    while ((node = walker.nextNode())) {
+      if (!node.nodeValue) continue;
+      for (const alias of aliases) {
+        if (node.nodeValue.includes(alias)) {
+          node.nodeValue = node.nodeValue.split(alias).join(userName);
+        }
+      }
+    }
+  }
+
+  function init() {
+    updateProfileName();
+    mountLogoutButton();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
+</body></html>
+

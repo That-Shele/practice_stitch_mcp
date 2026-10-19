@@ -9,6 +9,10 @@ const landingDir = path.join(__dirname, 'StitchLanding');
 app.use('/landing', express.static(landingDir));
 
 app.get('/', (_req, res) => {
+  res.redirect('/landing/login.html');
+});
+
+app.get('/app', (_req, res) => {
   res.redirect('/landing/index.html');
 });
 
